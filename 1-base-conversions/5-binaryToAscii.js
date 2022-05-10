@@ -23,6 +23,12 @@ const binaryStringToArray = str => {
 
 const binaryToAscii = str => {
   // Your code here
+  let result = '';
+  for (let i = 0; i < str.length; i = i + 8){
+    let temp = str.substring(i, i + 8);
+    result += String.fromCharCode(('0b' + temp))
+  }
+  return result
 };
 
 /******************************************************************************/
